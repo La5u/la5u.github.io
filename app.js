@@ -110,7 +110,8 @@ const particlesConfig = {
         events: {
             onhover: {
                 enable: true,
-                mode: "repulse"
+                mode: "repulse",
+                distance: 100
             },
             onclick: {
                 enable: true,
@@ -133,7 +134,7 @@ const particlesConfig = {
                 speed: 3
             },
             repulse: {
-                distance: 200,
+                distance: 100,
                 duration: 0.4
             },
             push: {
