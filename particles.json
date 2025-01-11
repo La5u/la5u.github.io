@@ -1,7 +1,7 @@
 {
     "particles": {
         "number": {
-            "value": 80,
+            "value": 100,
             "density": {
                 "enable": true,
                 "value_area": 800
@@ -95,8 +95,8 @@
                 "speed": 3
             },
             "repulse": {
-                "distance": 200,
-                "duration": 0.4
+                "distance": 150,
+                "duration": 0.3
             },
             "push": {
                 "particles_nb": 4
