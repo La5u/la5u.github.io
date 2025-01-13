@@ -14,15 +14,6 @@ body {
     background-color: black;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 header {
     position: absolute;
     top: 50%;
@@ -40,6 +31,12 @@ h1 {
     color: white;
 }
 
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
 .subtitle {
     font-size: 1.2rem;
     color: #0ff;
@@ -50,6 +47,7 @@ h1 {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 4rem;
+    pointer-events: auto;
 }
 
 .social-icon {
@@ -62,31 +60,33 @@ h1 {
     color: white;
 }
 
+.container {
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
 .projects {
     margin-top: 2rem;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: white;
-}
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
 }
 
 .project-card {
+    flex: 1 0 33%;
     background: black;
     color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 1rem;
     box-shadow: none;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
+    width: 300px;
 }
 
 .project-card:hover {
