@@ -1,6 +1,3 @@
-:root {
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +9,14 @@ body {
     line-height: 1.6;
     color: white;
     background-color: black;
+}
+
+
+.container {
+    margin: 0 auto; 
+    display: grid;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -31,11 +36,6 @@ h1 {
     color: white;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: white;
-}
 
 .subtitle {
     font-size: 1.2rem;
@@ -60,31 +60,25 @@ h2 {
     color: white;
 }
 
-.container {
-    margin: 0 auto; 
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
 }
-
-.projects {
-    margin-top: 2rem;
-}
-
 
 .project-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    justify-content: center;
     gap: 2rem;
 }
 
 .project-card {
-    flex: 1 0 33%;
+    display:inline-grid;
     background: black;
     color: white;
     padding: 1rem;
-    box-shadow: none;
+    
     transition: transform 0.4s ease;
     width: 300px;
 }
@@ -115,7 +109,7 @@ h2 {
     color: white;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
     }
@@ -123,7 +117,7 @@ h2 {
     .container {
         padding: 1rem;
     }
-}
+} */
 
 #particles-js {
     position: relative;
