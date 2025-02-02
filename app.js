@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize particles.js
     particlesJS.load('particles-js', 'particles.json', function() {
-        console.log('callback - particles.js config loaded');
+        // console.log('callback - particles.js config loaded');
     });
 
     // Smooth scroll for anchor links
@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     projectCards.forEach(card => observer.observe(card));
 
     // Extract the username from the URL
-    const username = window.location.hostname.split('.')[0]; // Get the part before ".github.io"
-    // const username = 'la5u'
+    // const username = window.location.hostname.split('.')[0]; // Get the part before ".github.io"
+    const username = 'la5u'
 
     // Update GitHub link
     const githubLink = document.querySelector('.github-link');
@@ -51,34 +51,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchPreviewImage(url) {
     try {
-        const response = await fetch(url, {
-            mode: 'cors',
-            headers: {
-                'Access-Control-Allow-Origin': '*', // This is typically set by the server, not the client
-                'Content-Type': 'text/html'
-            }
+        console.log(`Fetching image from URL: ${url}`); // Log the URL being fetched
+        const response = await fetch(url);
+        // Check if the response is OK (status in the range 200-299)
+        if (!response.ok) {
+            console.log(`Error fetching image: ${response.status} ${response.statusText}`);
+            return null; // Return null if the response is not OK
+        }
+        const screenshot = await new Promise((resolve, reject) => {
+            html2canvas(document.body, { scale: 4 }).then(canvas => { // Increased scale for a more pronounced zoom effect
+                const dataUrl = canvas.toDataURL('image/png');
+                resolve(dataUrl); // Return the screenshot URL
+            }).catch(error => {
+                console.error('Error taking screenshot:', error);
+                reject(null);
+            });
         });
-        const text = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(text, 'text/html');
-        const ogImage = doc.querySelector('meta[property="og:image"]');
-        return ogImage ? ogImage.content : null;
+        return screenshot; // Return the screenshot URL
     } catch (error) {
-        console.error('Error fetching preview image:', error);
+        console.log(`Fetch error: ${error}`);
         return null;
     }
 }
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseover', async () => {
+        const previewImage = card.querySelector('.preview-image');
 
-// Example usage for a project link
-const projectLinks = document.querySelectorAll('.project-links a');
-
-projectLinks.forEach(link => {
-    link.addEventListener('mouseover', async () => {
-        const imageUrl = await fetchPreviewImage(link.href);
-        if (imageUrl) {
-            // Display the image in a tooltip or modal
-            console.log('Preview Image URL:', imageUrl);
-            // You can implement your own logic to show this image
+        // Use a flag to ensure the image is fetched only once
+        if (!previewImage.src && !previewImage.dataset.fetched) {
+            const link = card.querySelector('.project-links a'); // Get the first link in the project card
+            
+            previewImage.dataset.fetched = true; // Set the flag to indicate the image has been fetched
+            const imageUrl = await fetchPreviewImage(link.href);
+            if (imageUrl) {
+                console.log(imageUrl); // Log the image URL
+                previewImage.src = imageUrl;
+                previewImage.style.display = 'block'; // Correctly set the display property
+            }
         }
     });
 });
