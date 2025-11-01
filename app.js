@@ -1,8 +1,35 @@
+console.log("app.js loaded!");
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("app.js loaded!");
     // Initialize particles.js
     particlesJS.load('particles-js', 'particles.json', function() {
         // console.log('callback - particles.js config loaded');
     });
+    
+    // Animated font cycling for name
+    const fonts = [
+        'Comic Neue',
+        'Impact',
+        'Courier New',
+        'Times New Roman',
+        'Arial',
+        'Verdana',
+        'Georgia',
+        'Trebuchet MS',
+        'Lucida Console',
+        'Palatino Linotype'
+    ];
+    
+    const nameElement = document.getElementById('name');
+    
+    function changeFont() {
+        const randomIndex = Math.floor(Math.random() * fonts.length);
+        nameElement.style.fontFamily = fonts[randomIndex];
+        const randomDelay = (Math.random() * 50) + 100;
+        setTimeout(changeFont, randomDelay);
+    }
+    
+    changeFont();
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
