@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 body {
@@ -41,27 +42,10 @@ h1 {
     color: #0ff;
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 4rem;
-    pointer-events: auto;
-}
-
-.social-icon {
-    font-size: 1.5rem;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: gray;
-}
 
 h2 {
     text-align: center;
-    margin: 2rem;
+    margin: 3rem;
     color: white;
 }
 
@@ -138,6 +122,26 @@ a.github-link:hover {
 }
 
 footer {
+    margin-top: 1.5rem;
+    padding: 0.5rem;
     text-align: center;
-    background-color: darkcyan;
+}
+
+.social-links {
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    pointer-events: auto;
+}
+
+
+.social-icon {
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: gray;
 }
