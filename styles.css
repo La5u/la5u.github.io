@@ -5,30 +5,11 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: white;
     background-color: black;
 }
-
-/* latin */
-@font-face {
-    font-family: 'Comic Neue';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/comicneue/v9/4UaHrEJDsxBrF37olUeD96rp5w.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Comic Neue';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/comicneue/v9/4UaErEJDsxBrF37olUeD_xHM8pxULg.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
 
 .container {
     margin: 0 auto;
@@ -43,9 +24,9 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    justify-content: center;
     color: white;
     z-index: 10;
-    pointer-events: none;
 }
 
 h1 {
@@ -75,20 +56,21 @@ h1 {
 }
 
 .social-icon:hover {
-    color: white;
+    color: gray;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 2rem;
     color: white;
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-columns: repeat(auto-fill, 300px);
     justify-content: center;
     gap: 2rem;
+    margin-bottom: 4rem;
 }
 
 .project-card {
@@ -96,9 +78,13 @@ h2 {
     background: black;
     color: white;
     padding: 1rem;
-    border: 1px solid white;
+    border: 1px solid darkslategray;
     transition: transform 0.4s ease;
     width: 300px;
+}
+
+img {
+    height: 50px !important;
 }
 
 .project-card:hover {
@@ -132,17 +118,26 @@ h2 {
 }
 
 #particles-js {
+    z-index: 0;
     position: relative;
     height: 100vh;
     pointer-events: auto;
 }
 a.github-link {
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     background-image: url('https://github.githubassets.com/favicons/favicon-dark.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     transition: transform 0.2s ease;
+}
+a.github-link:hover {
+    color: gray;
+}
+
+footer {
+    text-align: center;
+    background-color: darkcyan;
 }

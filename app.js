@@ -5,30 +5,33 @@ document.addEventListener('DOMContentLoaded', () => {
     particlesJS.load('particles-js', 'particles.json', function() {
         // console.log('callback - particles.js config loaded');
     });
-    
+
     // Animated font cycling for name
     const fonts = [
-        'Comic Neue',
         'Impact',
         'Courier New',
         'Times New Roman',
         'Arial',
         'Verdana',
-        'Georgia',
-        'Trebuchet MS',
-        'Lucida Console',
-        'Palatino Linotype'
+        'Roboto'
     ];
-    
+    // let fontIndex = 0;
     const nameElement = document.getElementById('name');
-    
+
+    // setInterval(() => {
+    //     nameElement.style.fontFamily = fonts[fontIndex];
+    //     fontIndex = (fontIndex + 1) % fonts.length;
+    // }, 150);
+
+    //nameElement.style.fontFamily = fonts[0];
+
     function changeFont() {
         const randomIndex = Math.floor(Math.random() * fonts.length);
         nameElement.style.fontFamily = fonts[randomIndex];
         const randomDelay = (Math.random() * 50) + 100;
         setTimeout(changeFont, randomDelay);
     }
-    
+
     changeFont();
 
     // Smooth scroll for anchor links
@@ -68,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update GitHub link
     const githubLink = document.querySelector('.github-link');
     githubLink.href = `https://github.com/${username}`;
-    
+
     // Update GitHub links for projects after the page loads
     document.querySelectorAll('.github-link[data-repo]').forEach(link => {
         const repo = link.getAttribute('data-repo');
