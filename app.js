@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
     projectCards.forEach(card => observer.observe(card));
 
     // Extract the username from the URL
-    const username = window.location.hostname.split('.')[0]; // Get the part before ".github.io"
-    // const username = 'la5u'
+    //const username = window.location.hostname.split('.')[0]; // Get the part before ".github.io"
+    const username = 'la5u'
 
     // Update GitHub link
     const githubLink = document.querySelector('.github-link');
