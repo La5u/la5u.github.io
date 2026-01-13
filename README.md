@@ -1,2 +1,2 @@
-## My personal sitee to show off my projects
+## My personal sitee
 Thanks for visiting

@@ -1,0 +1,12 @@
+baseURL = "lasu.dev/blog/"
+languageCode = "en"
+title = "Blog"
+
+# IMPORTANT: publish into repo-root /blog
+publishDir = "../blog"
+
+[permalinks]
+  posts = "/:slug/"
+
+[markup.goldmark.renderer]
+  unsafe = true

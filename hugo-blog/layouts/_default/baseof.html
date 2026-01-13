@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ "styles.css" | relURL }}" />
+  </head>
+  <body>
+    <header class="wrap">
+      <a class="home" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+      <a class="back" href="/">Back to lasu.dev</a>
+    </header>
+
+    <main class="wrap">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="wrap foot">
+      <span>© {{ now.Year }}</span>
+    </footer>
+  </body>
+</html>
