@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>lasu.dev/blog/</loc>
+    <loc>//localhost:40881/</loc>
     <lastmod>2026-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>lasu.dev/blog/hello/</loc>
+    <loc>//localhost:40881/hello/</loc>
     <lastmod>2026-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>lasu.dev/blog/posts/</loc>
+    <loc>//localhost:40881/posts/</loc>
     <lastmod>2026-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>lasu.dev/blog/categories/</loc>
+    <loc>//localhost:40881/categories/</loc>
   </url><url>
-    <loc>lasu.dev/blog/tags/</loc>
+    <loc>//localhost:40881/tags/</loc>
   </url>
 </urlset>

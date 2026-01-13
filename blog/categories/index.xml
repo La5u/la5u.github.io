@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Blog</title>
-    <link>lasu.dev/blog/categories/</link>
+    <link>//localhost:40881/categories/</link>
     <description>Recent content in Categories on Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="lasu.dev/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:40881/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

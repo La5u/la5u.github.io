@@ -1,4 +1,4 @@
-baseURL = "lasu.dev/blog/"
+baseURL = "/blog/"
 languageCode = "en"
 title = "Blog"
 
