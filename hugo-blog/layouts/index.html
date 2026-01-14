@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <h1>{{ site.Title }}</h1>
+
+  <ul class="postlist">
+    {{ range where .Site.RegularPages "Section" "posts" }}
+      {{ if eq .Language.Lang $.Site.Language.Lang }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}

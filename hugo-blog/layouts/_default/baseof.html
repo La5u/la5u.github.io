@@ -8,7 +8,23 @@
   </head>
   <body>
     <header class="wrap">
-      <a class="home" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+        <a class="home" href="{{ .Site.Home.RelPermalink }}">{{ site.Title }}</a>
+      <nav class="lang">
+        {{/* If this page has translations, link to the translated page */}}
+        {{ if .IsTranslated }}
+          {{ range .AllTranslations }}
+            {{ if eq .Language.Lang $.Site.Language.Lang }}
+              <span class="lang-current">{{ .Language.LanguageName }}</span>
+            {{ else }}
+              <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{/* Otherwise, link to the other language HOME */}}
+          <a href="{{ "/" | relLangURL }}">Home</a>
+        {{ end }}
+      </nav>
+
       <a class="back" href="/">Back to lasu.dev</a>
     </header>
 

@@ -1,12 +1,20 @@
 baseURL = "/blog/"
-languageCode = "en"
+publishDir = "../blog"
 title = "Blog"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+
+  [languages.ru]
+    languageName = "Русский"
+    weight = 2
+
 
 # IMPORTANT: publish into repo-root /blog
-publishDir = "../blog"
+
 
 [permalinks]
   posts = "/:slug/"
-
-[markup.goldmark.renderer]
-  unsafe = true
