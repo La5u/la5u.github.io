@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog</title>
+    <link>/blog/ru/</link>
+    <description>Recent content on Blog</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Wed, 14 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/blog/ru/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Поисковики</title>
+      <link>/blog/ru/search-engines/</link>
+      <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/blog/ru/search-engines/</guid>
+      <description>&lt;p&gt;У Google есть результаты ИИ, отслеживание и реклама. Пришло время перейти на альтернативы:&lt;/p&gt;&#xA;&lt;h3 id=&#34;платные-поисковые-системы&#34;&gt;Платные поисковые системы:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://kagi.com/&#34;&gt;Kagi&lt;/a&gt; - Настраиваемая поисковая система без рекламы и отслеживания. Результаты ИИ фильтруются автоматически. Самые релевантные результаты на мой опыт.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;бесплатные-поисковые-системы&#34;&gt;Бесплатные поисковые системы:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ecosia.org/&#34;&gt;Ecosia&lt;/a&gt; - Реклама оплачивает посадку деревьев. Все поиски зашифрованы.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://duckduckgo.com/&#34;&gt;DuckDuckGo&lt;/a&gt; - Поисковая система, ориентированная на конфиденциальность, ИИ можно отключить.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://startpage.com/&#34;&gt;StartPage&lt;/a&gt; - Прокси Google без отслеживания. Зависит от Google.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;самостоятельный-хостинг&#34;&gt;Самостоятельный хостинг:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/benbusby/whoogle-search&#34;&gt;Whoogle&lt;/a&gt; - Google без лишнего шума.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/searx/searx&#34;&gt;Searx&lt;/a&gt; - полностью открытый исходный код.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Различение AI</title>
+      <link>/blog/ru/distinguishing-ai-content/</link>
+      <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/blog/ru/distinguishing-ai-content/</guid>
+      <description>&lt;p&gt;Сгенерированный ИИ контент становится всё сложнее отличить от реального с каждым днём. Вот несколько сайтов, которые я рекомендую для практики:&lt;/p&gt;&#xA;&lt;h3 id=&#34;лёгкий-уровень&#34;&gt;Лёгкий уровень:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://whichfaceisreal.com/&#34;&gt;WhichFaceIsReal.com&lt;/a&gt; - Лица&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;средний-уровень&#34;&gt;Средний уровень:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.realornotquiz.com/&#34;&gt;Microsoft&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://sightengine.com/ai-or-not&#34;&gt;SightEngine&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ai-vs-real.com/&#34;&gt;AIvsReal&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;сложный-уровень&#34;&gt;Сложный уровень:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://realitycheckk.replit.app&#34;&gt;Reality Check&lt;/a&gt; - новые модели&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
