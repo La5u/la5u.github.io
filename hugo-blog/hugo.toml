@@ -1,6 +1,7 @@
 baseURL = "/blog/"
 publishDir = "../blog"
 title = "Blog"
+timeZone = "Asia/Almaty"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 [languages]
