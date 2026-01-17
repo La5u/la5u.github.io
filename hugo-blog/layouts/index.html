@@ -1,14 +1,36 @@
 {{ define "main" }}
-  <h1>{{ site.Title }}</h1>
+  <div class="page">
+    <h1 class="h1">Blog</h1>
 
-  <ul class="postlist">
-    {{ range where .Site.RegularPages "Section" "posts" }}
-      {{ if eq .Language.Lang $.Site.Language.Lang }}
-        <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-        </li>
+    {{/* Collect unique categories from posts */}}
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ $cats := slice }}
+    {{ range $posts }}
+      {{ range .Params.categories }}
+        {{ $cats = $cats | append . }}
       {{ end }}
     {{ end }}
-  </ul>
+    {{ $cats = uniq $cats | sort }}
+
+    <ul class="cats">
+      <li><button class="cat-btn is-active" data-category="all">All</button></li>
+      {{ range $cats }}
+        <li><button class="cat-btn" data-category="{{ . }}">{{ . }}</button></li>
+      {{ end }}
+    </ul>
+
+    <ul class="posts" id="posts-list">
+      {{ range $posts.ByDate.Reverse }}
+        {{ $cat := "" }}
+        {{ with index .Params.categories 0 }}{{ $cat = . }}{{ end }}
+        <li data-category="{{ $cat }}">
+          <a class="postlink" href="{{ .RelPermalink }}">
+            <h2 class="h2">{{ .Title }}</h2>
+            {{ with .Params.description }}<p class="desc">{{ . }}</p>{{ end }}
+            <p class="meta">{{ .Date.Format "January 2, 2006" }} &middot; {{ with .Params.author }}{{ . }}{{ end }}</p>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
 {{ end }}

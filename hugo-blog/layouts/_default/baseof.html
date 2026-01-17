@@ -1,39 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ .Site.Language.Lang }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}Blog{{ else }}{{ .Title }} · Blog{{ end }}</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="{{ "styles.css" | relURL }}" />
   </head>
-  <body>
-    <header class="wrap">
-        <a class="home" href="{{ .Site.Home.RelPermalink }}">{{ site.Title }}</a>
-      <nav class="lang">
-        {{/* If this page has translations, link to the translated page */}}
-        {{ if .IsTranslated }}
-          {{ range .AllTranslations }}
-            {{ if eq .Language.Lang $.Site.Language.Lang }}
-              <span class="lang-current">{{ .Language.LanguageName }}</span>
-            {{ else }}
-              <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
-            {{ end }}
-          {{ end }}
-        {{ else }}
-          {{/* Otherwise, link to the other language HOME */}}
-          <a href="{{ "/" | relLangURL }}">Home</a>
-        {{ end }}
-      </nav>
 
-      <a class="back" href="/">Back to lasu.dev</a>
-    </header>
-
-    <main class="wrap">
+  <body class="bg">
+    {{ partial "nav.html" . }}
+    <main class="container">
       {{ block "main" . }}{{ end }}
     </main>
-
-    <footer class="wrap foot">
-      <span>© {{ now.Year }}</span>
-    </footer>
+    <script src="{{ "blog.js" | relURL }}"></script>
   </body>
 </html>

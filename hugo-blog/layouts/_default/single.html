@@ -1,9 +1,12 @@
 {{ define "main" }}
-  <article>
-    <h1>{{ .Title }}</h1>
-    <p class="date">{{ .Date.Format "2006-01-02" }}</p>
-    <div class="content">
-      {{ .Content }}
-    </div>
-  </article>
+  <section class="postpage">
+    <article class="article">
+      <h1 class="h1">{{ .Title }}</h1>
+      <p class="meta">{{ .Date.Format "January 2, 2006" }} {{ with .Params.author }}&middot; {{ . }}{{ end }}</p>
+
+      <div class="prose">
+        {{ .Content }}
+      </div>
+    </article>
+  </section>
 {{ end }}

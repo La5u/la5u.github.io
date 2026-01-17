@@ -2,6 +2,7 @@
 title: "Search Engines"
 date: 2026-01-14
 slug: "search-engines"
+description: "my recommendations for search engines"
 ---
 Google has AI results, tracking, and advertisements. It's time to switch to an alternatives:
 ### Paid Search Engines:
